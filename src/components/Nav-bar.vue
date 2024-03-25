@@ -30,16 +30,15 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  box-shadow: 0 3px 15px #16297c1a;
   background-color: #f8f9fa;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .navbar {
-  width: 70%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 16px;
+  width: 70%;
+  margin: 0 auto;
   height: 100px;
 
   &__logo {
@@ -56,7 +55,7 @@ export default {
 
       &--active {
         color: #12b886;
-        border-color: #12b886; /* Change border color only */
+        border-color: #12b886;
       }
 
       li {
@@ -70,12 +69,12 @@ export default {
           border-radius: 20px;
           transition:
             background-color 0.3s,
-            border-color 0.3s; /* Add border-color transition */
-          border: 2px solid transparent; /* Initial transparent border */
+            border-color 0.3s;
+          border: 2px solid transparent;
 
           &:hover {
             color: #12b886;
-            border-color: #12b886; /* Change border color on hover */
+            border-color: #12b886;
           }
         }
       }

@@ -5,50 +5,64 @@
       <h1 class="user-profile__name">I'am <span>Abdelrahman</span></h1>
       <div class="user-profile__role">Frontend Developer</div>
 
-      <div class="user-profile__social-links">
-        <a
-          class="user-profile__social-link user-profile__social-link--linkedin"
-          href="http://linkedin.com/in/mohammed-taysser"
-          target="_blank"
-          title="linkedin"
-          rel="noopener"
-        ></a>
-        <a
-          class="user-profile__social-link user-profile__social-link--github"
-          href="https://github.com/mohammed-Taysser"
-          target="_blank"
-          rel="noopener"
-          title="github"
-        ></a>
-        <a
-          class="user-profile__social-link user-profile__social-link--leetcode"
-          href="mailto:mohamedtaysser983@gmail.com"
-          title="gmail"
-          target="_blank"
-        ></a>
-        <a
-          class="user-profile__social-link user-profile__social-link--codeforces"
-          href="mailto:mohamedtaysser983@gmail.com"
-          title="gmail"
-          target="_blank"
-        ></a>
-        <a
-          class="user-profile__social-link user-profile__social-link--email"
-          href="mailto:mohamedtaysser983@gmail.com"
-          title="gmail"
-          target="_blank"
-        ></a>
-        <a
-          class="user-profile__social-link user-profile__social-link--telephone"
-          href="mailto:mohamedtaysser983@gmail.com"
-          title="gmail"
-          target="_blank"
-        ></a>
+      <div class="social">
+        <div class="user-profile__social-links">
+          <a
+            class="user-profile__social-link user-profile__social-link--linkedin"
+            href="https://www.linkedin.com/in/geekabdo/"
+            target="_blank"
+            title="linkedin"
+            rel="noopener"
+          >
+            <img src="../assets/svg/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a
+            class="user-profile__social-link user-profile__social-link--github"
+            href="https://github.com/GeekAbdou"
+            target="_blank"
+            rel="noopener"
+            title="github"
+          >
+            <img src="../assets/svg/github.svg" alt="LinkedIn" />
+          </a>
+          <a
+            class="user-profile__social-link user-profile__social-link--leetcode"
+            href="https://leetcode.com/GeekAbdo/"
+            title="leetcode"
+            target="_blank"
+          >
+            <img src="../assets/svg/leetcode.svg" alt="LinkedIn" />
+          </a>
+          <a
+            class="user-profile__social-link user-profile__social-link--codeforces"
+            href="https://codeforces.com/profile/_Levi_"
+            title="codeforces"
+            target="_blank"
+          >
+            <img src="../assets/svg/codeforces.svg" alt="LinkedIn" />
+          </a>
+          <a
+            class="user-profile__social-link user-profile__social-link--email"
+            href="mailto:geek.abdoo@gmail.com"
+            title="gmail"
+            target="_blank"
+          >
+            <img src="../assets/svg/email.svg" alt="LinkedIn" />
+          </a>
+          <a
+            class="user-profile__social-link user-profile__social-link--telephone"
+            href="+201094668220"
+            title="telephone"
+            target="_blank"
+          >
+            <img src="../assets/svg/telephone.svg" alt="LinkedIn" />
+          </a>
+        </div>
       </div>
     </div>
 
     <div class="user-profile__avatar">
-      <img alt="my avatar" />
+      <img alt="my avatar" src="../assets/abdelrahman.png" />
     </div>
   </div>
 </template>
@@ -68,15 +82,18 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background: white;
   height: calc(100vh - 100px);
+  width: 72%;
+  margin: 0 auto;
 
   &__greeting,
   &__name,
   &__role {
-    font-size: calc(1.475rem + 2.7vw);
+    font-size: calc(1rem + 1.8vw);
     color: #333;
     font-weight: 700;
+    margin: -16px 0px;
+
     span {
       font-weight: 700;
       background-size: 100% 100%;
@@ -92,50 +109,25 @@ export default {
 
   &__social-links {
     display: flex;
-    justify-content: center;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
 
-    &--linkedin,
-    &--github,
-    &--email {
-      width: 3rem;
-      height: 3rem;
-      background-size: contain;
-      background-repeat: no-repeat;
-      display: block;
+  &__social-link {
+    img {
+      width: calc(1rem + 0.8vw);
+      height: calc(1rem + 0.8vw);
     }
-    /*
-    &--linkedin {
-      background-image: url('/path-to-linkedin-icon.svg'); // Update with actual path.
-    }
-
-    &--github {
-      background-image: url('/path-to-github-icon.svg'); // Update with actual path.
-    }
-    &--leetcode {
-      background-image: url('/path-to-email-icon.svg'); // Update with actual path.
-    }
-    &--codeforces {
-      background-image: url('/path-to-email-icon.svg'); // Update with actual path.
-    }
-    &--email {
-      background-image: url('/path-to-email-icon.svg'); // Update with actual path.
-    }
-    &--telephone {
-      background-image: url('/path-to-email-icon.svg'); // Update with actual path.
-    }*/
   }
 
   &__avatar {
-    width: 200px; // Set the size of the avatar image container.
-    height: 200px;
+    width: 350px; // Set the size of the avatar image container.
+    height: 350px;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid #ccc; // This should match the border color in the image.
+    border: 5px solid #12b886; // This should match the border color in the image.
     img {
       width: 100%;
-      height: auto;
     }
   }
 }
