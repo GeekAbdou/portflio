@@ -937,7 +937,7 @@ export default {
 .skills {
   display: flex;
   margin: -50px auto;
-  height: calc(100vh - 60px);
+  height: calc(60vh - 60px);
 
   &__frontend {
     &__heading {

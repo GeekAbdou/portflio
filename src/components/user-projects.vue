@@ -1,0 +1,108 @@
+<template>
+  <div class="projects-header">
+    <span>My Projects</span>
+  </div>
+
+  <div class="container">
+    <Tabs class="container__Projects" :projects="projects" />
+  </div>
+</template>
+
+<script>
+import Tabs from './Tabs.vue'
+import projectImage from '../assets/123.webp'
+
+export default {
+  components: {
+    Tabs
+  },
+  data() {
+    return {
+      projects: [
+        {
+          name: 'Project 1',
+          category: 'React',
+          image: projectImage,
+          link: 'https://github.com/project1',
+          preview: 'https://project1.com',
+          description:
+            'Circle is a social media appsocial media appsocial media appsocial media appmedia appsocial mediamedia appsocial media appmedia appsocial medimedia appsocial media appmedia appsocial media appmedia appsocial media appa appmedia appsocial media app appmedia appsocial media app'
+        },
+        {
+          name: 'Project 2',
+          category: 'React',
+          image: projectImage,
+          link: 'https://github.com/project2',
+          preview: 'https://project2.com',
+          description:
+            'Circle is a social media appsocial media appsocial media appsocial media appmedia appsocial mediamedia appsocial media appmedia appsocial medimedia appsocial media appmedia appsocial media appmedia appsocial media appa appmedia appsocial media app appmedia appsocial media app'
+        },
+        {
+          name: 'Project 3',
+          category: 'Vue',
+          image: projectImage,
+          link: 'https://github.com/project2',
+          preview: 'https://project2.com',
+          description:
+            'Circle is a social media appsocial media appsocial media appsocial media appmedia appsocial mediamedia appsocial media appmedia appsocial medimedia appsocial media appmedia appsocial media appmedia appsocial media appa appmedia appsocial media app appmedia appsocial media app'
+        },
+        {
+          name: 'Project 4',
+          category: 'Vue',
+          image: projectImage,
+          link: 'https://github.com/project2',
+          preview: 'https://project2.com',
+          description:
+            'Circle is a social media appsocial media appsocial media appsocial media appmedia appsocial mediamedia appsocial media appmedia appsocial medimedia appsocial media appmedia appsocial media appmedia appsocial media appa appmedia appsocial media app appmedia appsocial media app'
+        },
+        {
+          name: 'Project 5',
+          category: 'Vue',
+          image: projectImage,
+          link: 'https://github.com/project2',
+          preview: 'https://project2.com',
+          description:
+            'Circle is a social media appsocial media appsocial media appsocial media appmedia appsocial mediamedia appsocial media appmedia appsocial medimedia appsocial media appmedia appsocial media appmedia appsocial media appa appmedia appsocial media app appmedia appsocial media app'
+        }
+      ]
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.container {
+  display: flex;
+  justify-content: center;
+  height: 60vh;
+}
+
+.projects-header {
+  display: flex;
+  margin: 50px auto;
+  font-size: 30px;
+  font-weight: 900;
+  position: relative;
+  color: #12b886;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: 'Projects';
+    position: absolute;
+    top: -55px;
+    left: 0;
+    display: inline-block;
+    font-family:
+      Lavishly Yours,
+      cursive;
+    font-size: 80px;
+    line-height: 130px;
+    color: #12b886;
+    opacity: 0.2;
+    pointer-events: none;
+    left: 50%;
+    transform: translate(-50%);
+  }
+}
+</style>
