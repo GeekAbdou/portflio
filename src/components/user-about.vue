@@ -161,7 +161,8 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  height: 70vh;
+  margin-bottom: 150px;
+
   &__right {
     &__title {
       font-size: 2.5rem;
@@ -310,9 +311,16 @@ export default {
   }
 }
 
-@media screen and (min-width: 601px) and (max-width: 1200px) {
+@media screen and (min-width: 300px) and (max-width: 900px) {
   .about-section {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    height: auto;
+
     &__right {
+      margin: 60px 40px;
+
       &__description {
         font-size: 16px;
         line-height: 1.4;
@@ -330,18 +338,27 @@ export default {
         }
       }
 
-      /* &__links {
-        &__link {
-          &--download {
-          }
+      &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 30px 0;
+
+        &__continue {
+          margin-right: 0;
         }
-      }*/
+
+        & a {
+          width: 80%;
+          text-align: center;
+          margin: 4px auto;
+        }
+      }
     }
 
     &__left {
       img {
-        width: 400px;
-        height: 420px;
+        display: none;
       }
     }
   }

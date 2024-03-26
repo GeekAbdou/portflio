@@ -89,7 +89,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  height: calc(100vh + 80px);
+  height: calc(100vh + 60px);
   margin: 0 auto;
 
   &__greeting,
@@ -136,6 +136,21 @@ export default {
 
     img {
       width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 900px) {
+  .user-profile {
+    flex-direction: column;
+    margin: 0 auto;
+    height: 100vh;
+
+    &__card {
+      margin: auto 0;
+    }
+    &__avatar {
+      margin: 0;
     }
   }
 }

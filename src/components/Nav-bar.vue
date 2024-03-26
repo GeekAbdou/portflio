@@ -48,7 +48,7 @@ export default {
   margin: 0 auto;
   height: 80px;
   &__logo {
-    width: 500px;
+    width: 100px;
 
     img {
       display: block;
@@ -86,6 +86,14 @@ export default {
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 860px) {
+  .navbar {
+    &__links {
+      display: none;
     }
   }
 }

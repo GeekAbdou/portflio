@@ -16,26 +16,32 @@
       <div class="" v-for="project in filteredProjects" :key="project.name">
         <div class="project">
           <div class="project__image-wrapper">
-            <img class="project__image-wrapper--image" :src="project.image" :alt="project.name" />
+            <a :href="project.link" target="_blank" rel="noopener">
+              <img class="project__image-wrapper--image" :src="project.image" :alt="project.name" />
+            </a>
           </div>
           <div class="project__content">
             <a class="project__name-link" :href="project.link" target="_blank" rel="noopener">{{
               project.name
             }}</a>
+
+            <hr />
+
             <p class="project__description">
               {{ project.description }}
             </p>
+
             <div class="project__links">
               <a
                 :href="project.link"
-                class="project__link project__link--demo"
+                class="project__link project__links__link--demo"
                 target="_blank"
                 rel="noopener"
                 >Live Demo</a
               >
               <a
                 :href="project.preview"
-                class="project__link project__link--github"
+                class="project__link project__links__link--github"
                 target="_blank"
                 rel="noopener"
                 >Github Link</a
@@ -100,7 +106,8 @@ export default {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 50px;
-    width: 1200px;
+    max-width: 70%;
+    margin: auto;
   }
 }
 
@@ -110,8 +117,8 @@ export default {
   overflow: hidden;
   background: #ffffff;
   margin: 10px;
-  width: 400px;
-  height: 500px;
+  width: 100%;
+  height: auto;
 
   &__image-wrapper {
     max-width: 100%;
@@ -134,12 +141,18 @@ export default {
   }
 
   &__name-link {
-    color: #333333;
-    font-weight: bold;
+    background-color: transparent;
+    border: 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: #12b886;
+    outline: 0;
+    background-image: linear-gradient(transparent 50%, rgba(18, 184, 134, 0.2) 50%);
     text-decoration: none;
-    font-size: 20px;
-    display: block;
-    margin-bottom: 8px;
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    will-change: background-size;
+    transition: background-size 0.3s cubic-bezier(0.645, 0.645, 0.355, 1);
   }
 
   &__description {
@@ -154,11 +167,33 @@ export default {
     display: flex;
     justify-content: space-between;
 
+    &__link {
+      padding: 10px 20px;
+      color: #12b886;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      overflow: hidden;
+      transition: 0.5s;
+
+      &--demo {
+        background: #12b886;
+        color: #fff;
+        border-radius: 5px;
+      }
+
+      &--github {
+        background: #fff;
+        color: #12b886;
+        border: 1px solid #12b886;
+        border-radius: 5px;
+      }
+    }
+
     & > a {
       position: relative;
       display: inline-block;
       padding: 10px 20px;
-      color: #12b886;
       font-size: 16px;
       text-decoration: none;
       text-transform: uppercase;

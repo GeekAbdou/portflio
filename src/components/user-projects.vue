@@ -74,7 +74,6 @@ export default {
 .container {
   display: flex;
   justify-content: center;
-  height: 60vh;
 }
 
 .projects-header {
