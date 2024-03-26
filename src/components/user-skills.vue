@@ -7,36 +7,36 @@
     <div class="skills">
       <div class="skills__frontend">
         <div class="skills__frontend__heading">
-          <img src="../assets/svg/frontend.svg" alt="frontend" />
+          <img src="../assets/svg/frontend.svg" alt="Frontend" />
           <h2>&lt;Frontend/&gt;</h2>
         </div>
 
         <div class="skills__frontend__list">
-          <div class="skills__frontend__list--item">
-            <img
-              v-for="(item, index) in frontend"
-              :src="`../src/assets/svg/${item}.svg`"
-              :alt="item"
-              :key="index"
-            />
+          <div
+            v-for="(item, index) in frontend"
+            :key="`frontend-${index}`"
+            class="skills__frontend__list--item tooltip-wrapper"
+          >
+            <img :src="`../src/assets/svg/${item}.svg`" :alt="item" />
+            <span class="tooltip-text">{{ item }}</span>
           </div>
         </div>
       </div>
 
       <div class="skills__others">
         <div class="skills__others__heading">
-          <img src="../assets/svg/others.svg" alt="frontend" />
+          <img src="../assets/svg/others.svg" alt="Others" />
           <h2>Others</h2>
         </div>
 
         <div class="skills__others__list">
-          <div class="skills__others__list--item">
-            <img
-              v-for="(item, index) in others"
-              :src="`../src/assets/svg/${item}.svg`"
-              :alt="item"
-              :key="index"
-            />
+          <div
+            v-for="(item, index) in others"
+            :key="`others-${index}`"
+            class="skills__others__list--item tooltip-wrapper"
+          >
+            <img :src="`../src/assets/svg/${item}.svg`" :alt="item" />
+            <span class="tooltip-text">{{ item }}</span>
           </div>
         </div>
       </div>
@@ -48,44 +48,44 @@
 export default {
   setup() {
     const frontend = [
-      'html',
-      'css',
-      'js',
-      'ts',
-      'react',
-      'redux',
-      'nextjs',
-      'vuejs',
-      'nuxtjs',
-      'vuex',
-      'bootstrap',
-      'sass',
-      'tailwind',
-      'material',
-      'jasmine',
-      'jest',
-      'vitejs',
-      'webpack'
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Redux',
+      'NextJS',
+      'VueJS',
+      'NuxtJS',
+      'Vuex',
+      'Bootstrap',
+      'SASS',
+      'Tailwind',
+      'MaterialUI',
+      'Jasmine',
+      'Jest',
+      'ViteJS',
+      'Webpack'
     ]
     const others = [
-      'npm',
-      'nodejs',
-      'c++',
-      'dart',
-      'flutter',
-      'python',
-      'mongodb',
-      'firebase',
-      'git',
-      'figma',
-      'eslint',
-      'yarn',
-      'markdown',
-      'github',
-      'ubunto',
-      'scrum',
-      'cypress',
-      'arduino'
+      'NPM',
+      'NodeJS',
+      'C++',
+      'Dart',
+      'Flutter',
+      'Python',
+      'MongoDB',
+      'Firebase',
+      'GIT',
+      'Figma',
+      'ESlint',
+      'Yarn',
+      'Markdown',
+      'Github',
+      'Ubunto',
+      'Scrum',
+      'Cypress',
+      'Arduino'
     ]
 
     return { frontend, others }
@@ -122,6 +122,7 @@ export default {
     transform: translate(-50%);
   }
 }
+
 .container {
   display: flex;
   margin: 0 auto;
@@ -136,62 +137,26 @@ export default {
   flex-direction: row;
   justify-content: center;
 
-  &__frontend {
+  &__frontend,
+  &__others {
     &__heading {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      padding: 10px 0 10px 0;
+      padding: 10px 0;
       box-shadow: 0 3px 15px #16297c1a;
-      margin: 40px 20px 0 20px;
+      margin: 40px 20px 0;
       border-radius: 4px;
 
-      & img {
+      img {
         color: #12b886;
         width: 60px;
         height: 60px;
         padding: 10px;
       }
 
-      & h2 {
-        font-size: 25x;
-        font-weight: 500;
-        margin-top: 10px;
-      }
-    }
-
-    &__list {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding: 0 10px;
-      margin: 0px 20px;
-      box-shadow: 0 3px 15px #16297c1a;
-      border-radius: 4px;
-      &--item img {
-        margin: 20px 10px;
-      }
-    }
-  }
-
-  &__others {
-    &__heading {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      padding: 10px 0 10px 0;
-      box-shadow: 0 3px 15px #16297c1a;
-      margin: 40px 20px 0 20px;
-      border-radius: 4px;
-
-      & img {
-        width: 60px;
-        height: 60px;
-        padding: 10px;
-      }
-
-      & h2 {
-        font-size: 25x;
+      h2 {
+        font-size: 25px;
         font-weight: 500;
         margin-top: 10px;
       }
@@ -205,9 +170,80 @@ export default {
       margin: 0 20px;
       box-shadow: 0 3px 15px #16297c1a;
       border-radius: 4px;
-      &--item img {
-        margin: 20px 10px;
+
+      &--item {
+        position: relative;
+        display: inline-block;
+        img {
+          margin: 20px 10px;
+        }
+
+        img:hover::after {
+          content: attr(title);
+          position: absolute;
+          bottom: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+          padding: 5px;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: #fff;
+          font-size: 14px;
+          border-radius: 4px;
+          white-space: nowrap;
+          z-index: 999;
+          visibility: hidden;
+          opacity: 0;
+          transition:
+            visibility 0s linear 0.3s,
+            opacity 0.3s linear;
+        }
+
+        img:hover::after {
+          visibility: visible;
+          opacity: 1;
+          transition-delay: 0s;
+        }
       }
+    }
+  }
+
+  .tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+
+    .tooltip-text {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      font-size: 14px;
+      border-radius: 4px;
+      white-space: nowrap;
+      z-index: 999;
+      transition:
+        opacity 0.3s,
+        visibility 0.3s;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
+      }
+    }
+
+    &:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
@@ -216,12 +252,16 @@ export default {
   .container {
     width: 90%;
   }
+
   .skills {
     flex-direction: column;
     align-items: center;
-    &__frontend {
+
+    &__frontend,
+    &__others {
       &__list {
         &--item img {
+          // Responsive styles if needed
         }
       }
     }
