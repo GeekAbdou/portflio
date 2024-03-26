@@ -89,14 +89,14 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  height: calc(100vh - 100px);
+  height: calc(100vh + 80px);
   margin: 0 auto;
 
   &__greeting,
   &__name,
   &__role {
-    font-size: calc(1rem + 1.8vw);
-    color: #333;
+    font-size: calc(1.5rem + 1.8vw);
+    color: #000;
     font-weight: 700;
     margin: -16px 0px;
 

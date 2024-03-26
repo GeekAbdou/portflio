@@ -126,13 +126,13 @@
           </li>
         </ul>
         <div class="about-section__right__links">
-          <a href="https://github.com/GeekAbdou" class="about-section__links__link"
+          <a href="https://github.com/GeekAbdou" class="about-section__right__links__continue"
             >Continue Reading</a
           >
           <a
+            class="about-section__right__links__download"
             href="https://drive.google.com/file/d/"
             target="_blank"
-            class="about-section__right__links__link about-section__links__link--download"
             >Download CV</a
           >
         </div>
@@ -161,8 +161,7 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  height: 100vh;
-
+  height: 70vh;
   &__right {
     &__title {
       font-size: 2.5rem;
@@ -172,6 +171,24 @@ export default {
       text-align: left;
 
       &::before {
+        content: 'Knowledge';
+        position: absolute;
+        top: -35px;
+        left: 0;
+        display: inline-block;
+        font-family:
+          Lavishly Yours,
+          cursive;
+        font-size: 80px;
+        line-height: 130px;
+        color: #12b886;
+        opacity: 0.2;
+        pointer-events: none;
+        left: 50%;
+        transform: translate(-50%);
+      }
+
+      &::after {
         content: '';
         height: 7px;
         width: 7px;
@@ -218,28 +235,53 @@ export default {
 
     &__links {
       display: flex;
-      justify-content: space-between;
-      margin-top: 2rem;
 
-      &__link {
+      &__continue {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #12b886;
+        font-size: 16px;
         text-decoration: none;
-        font-weight: bold;
-        font-size: 14px;
-        padding: 0.5rem 1rem;
-        border-radius: 2rem;
-        transition: background-color 0.3s ease;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: 0.5s;
+        letter-spacing: 4px;
+        margin-right: 50px;
 
         &:hover {
-          cursor: pointer;
-          background-color: #eee;
-        }
-
-        &--download {
+          background: #12b886;
           color: #fff;
-          background-color: #5cb85c;
-          &:hover {
-            background-color: darken(#5cb85c, 10%);
-          }
+          border-radius: 5px;
+          box-shadow:
+            0 0 5px #12b886cc,
+            0 0 25px #12b88699,
+            0 0 50px #12b88666,
+            0 0 100px #12b88633;
+        }
+      }
+
+      &__download {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1em;
+        padding: 0.5rem;
+        background-color: #12b886;
+        color: #fff;
+        border-radius: 0.25rem;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        transition:
+          transform ease-in 0.1s,
+          box-shadow ease-in 0.25s,
+          color ease-in-out 0.3s,
+          background-color ease-in-out 0.3s;
+        box-shadow: 0 3px 15px #12b88680;
+
+        &:hover {
+          background-color: #12b886cc;
+          color: #fff;
         }
       }
     }
