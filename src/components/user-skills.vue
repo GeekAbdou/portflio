@@ -7,7 +7,7 @@
     <div class="skills">
       <div class="skills__frontend">
         <div class="skills__frontend__heading">
-          <img src="../assets/svg/frontend.svg" alt="Frontend" />
+          <img src="@/../src/assets/svg/frontend.svg" alt="Frontend" />
           <h2>&lt;Frontend/&gt;</h2>
         </div>
 
@@ -17,7 +17,7 @@
             :key="`frontend-${index}`"
             class="skills__frontend__list--item tooltip-wrapper"
           >
-            <img :src="`../src/assets/svg/${item}.svg`" :alt="item" />
+            <img :src="`@/../src/assets/svg/${item}.svg`" :alt="item" />
 
             <span class="tooltip-text">{{ item }}</span>
           </div>
@@ -26,7 +26,7 @@
 
       <div class="skills__others">
         <div class="skills__others__heading">
-          <img src="../assets/svg/others.svg" alt="Others" />
+          <img src="@/../src/assets/svg/others.svg" alt="Others" />
           <h2>Others</h2>
         </div>
 
@@ -36,7 +36,7 @@
             :key="`others-${index}`"
             class="skills__others__list--item tooltip-wrapper"
           >
-            <img :src="`../src/assets/svg/${item}.svg`" :alt="item" />
+            <img :src="`@/../src/assets/svg/${item}.svg`" :alt="item" />
             <span class="tooltip-text">{{ item }}</span>
           </div>
         </div>
