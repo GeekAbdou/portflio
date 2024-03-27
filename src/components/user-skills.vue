@@ -18,6 +18,7 @@
             class="skills__frontend__list--item tooltip-wrapper"
           >
             <img :src="`../src/assets/svg/${item}.svg`" :alt="item" />
+
             <span class="tooltip-text">{{ item }}</span>
           </div>
         </div>
@@ -136,6 +137,7 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  max-width: 1200px;
 
   &__frontend,
   &__others {
@@ -170,6 +172,7 @@ export default {
       margin: 0 20px;
       box-shadow: 0 3px 15px #16297c1a;
       border-radius: 4px;
+      width: 450px;
 
       &--item {
         position: relative;
@@ -248,20 +251,27 @@ export default {
   }
 }
 
-@media screen and (min-width: 300px) and (max-width: 900px) {
+@media screen and (min-width: 300px) and (max-width: 1200px) {
   .container {
     width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .skills {
     flex-direction: column;
-    align-items: center;
+    margin-right: -30px;
 
     &__frontend,
     &__others {
       &__list {
+        justify-content: center;
+        align-items: center;
+        width: auto;
         &--item img {
-          // Responsive styles if needed
         }
       }
     }

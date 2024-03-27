@@ -25,6 +25,17 @@
               project.name
             }}</a>
 
+            <div class="project__langs">
+              <div
+                v-for="(lang, index) in project.langs"
+                :key="`${projectName}-${index}`"
+                class="project__langs--lang tooltip-wrapper"
+              >
+                <img :src="`../src/assets/svg/${lang}.svg`" :alt="lang" />
+                <span class="tooltip-text">{{ lang }}</span>
+              </div>
+            </div>
+
             <hr />
 
             <p class="project__description">
@@ -106,8 +117,8 @@ export default {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 50px;
-    max-width: 70%;
-    margin: auto;
+    max-width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -118,7 +129,7 @@ export default {
   background: #ffffff;
   margin: 10px;
   width: 100%;
-  height: auto;
+  max-height: 650px;
 
   &__image-wrapper {
     max-width: 100%;
@@ -138,6 +149,26 @@ export default {
 
   &__content {
     padding: 16px;
+  }
+
+  &__langs {
+    display: flex;
+    flex-direction: row;
+    margin: 8px 0;
+
+    &--lang {
+      margin-right: 8px;
+      & img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  & hr {
+    color: #ffffff;
+    border: 1px solid #f3f3f3;
+    align-items: right;
   }
 
   &__name-link {
@@ -160,6 +191,8 @@ export default {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 16px;
+    height: 200px;
+    overflow: hidden;
   }
 
   &__links {
@@ -210,6 +243,46 @@ export default {
           0 0 50px #12b88666,
           0 0 100px #12b88633;
       }
+    }
+  }
+
+  .tooltip-wrapper {
+    position: relative;
+    display: inline-block;
+
+    .tooltip-text {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      bottom: 90%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 5px;
+      background-color: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      font-size: 14px;
+      border-radius: 4px;
+      white-space: nowrap;
+      z-index: 999;
+      transition:
+        opacity 0.3s,
+        visibility 0.3s;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.9) transparent transparent transparent;
+      }
+    }
+
+    &:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }

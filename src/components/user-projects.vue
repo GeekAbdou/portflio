@@ -26,7 +26,8 @@ export default {
           link: 'https://github.com/project1',
           preview: 'https://project1.com',
           description:
-            'Circle is a social media appsocial media appsocial media appsocial media appmedia appsocial mediamedia appsocial media appmedia appsocial medimedia appsocial media appmedia appsocial media appmedia appsocial media appa appmedia appsocial media app appmedia appsocial media app'
+            'Circle is a social mediaCircle is a social mediaCircle is a social mediaCirclCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social Circle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediamediaCircle is a social mediaCircle is a social mediae is a social mediaCircle is a social media',
+          langs: ['HTML', 'CSS', 'JavaScript', 'React']
         },
         {
           name: 'Project 2',
@@ -34,8 +35,8 @@ export default {
           image: projectImage,
           link: 'https://github.com/project2',
           preview: 'https://project2.com',
-          description:
-            'Circle is a social media appsocial media appsocial media appsocial media appmedia appsocial mediamedia appsocial media appmedia appsocial medimedia appsocial media appmedia appsocial media appmedia appsocial media appa appmedia appsocial media app appmedia appsocial media app'
+          description: 'Circle is a social media',
+          langs: ['HTML', 'React']
         },
         {
           name: 'Project 3',
@@ -43,8 +44,8 @@ export default {
           image: projectImage,
           link: 'https://github.com/project2',
           preview: 'https://project2.com',
-          description:
-            'Circle is a social media appsocial media appsocial media appsocial media appmedia appsocial mediamedia appsocial media appmedia appsocial medimedia appsocial media appmedia appsocial media appmedia appsocial media appa appmedia appsocial media app appmedia appsocial media app'
+          description: 'Circle is a social media',
+          langs: ['JavaScript', 'React']
         },
         {
           name: 'Project 4',
@@ -52,8 +53,8 @@ export default {
           image: projectImage,
           link: 'https://github.com/project2',
           preview: 'https://project2.com',
-          description:
-            'Circle is a social media appsocial media appsocial media appsocial media appmedia appsocial mediamedia appsocial media appmedia appsocial medimedia appsocial media appmedia appsocial media appmedia appsocial media appa appmedia appsocial media app appmedia appsocial media app'
+          description: 'Circle is a social media',
+          langs: ['HTML', 'JavaScript', 'React']
         },
         {
           name: 'Project 5',
@@ -61,8 +62,8 @@ export default {
           image: projectImage,
           link: 'https://github.com/project2',
           preview: 'https://project2.com',
-          description:
-            'Circle is a social media appsocial media appsocial media appsocial media appmedia appsocial mediamedia appsocial media appmedia appsocial medimedia appsocial media appmedia appsocial media appmedia appsocial media appa appmedia appsocial media app appmedia appsocial media app'
+          description: 'Circle is a social media',
+          langs: ['HTML', 'CSS', 'JavaScript', 'React']
         }
       ]
     }
