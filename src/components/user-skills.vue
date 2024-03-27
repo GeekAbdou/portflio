@@ -7,7 +7,7 @@
     <div class="skills">
       <div class="skills__frontend">
         <div class="skills__frontend__heading">
-          <img src="@/../src/assets/svg/frontend.svg" alt="Frontend" />
+          <img :src="frontendSVG" alt="Frontend" />
           <h2>&lt;Frontend/&gt;</h2>
         </div>
 
@@ -17,8 +17,7 @@
             :key="`frontend-${index}`"
             class="skills__frontend__list--item tooltip-wrapper"
           >
-            <img :src="`@/../src/assets/svg/${item}.svg`" :alt="item" />
-
+            <img :src="getSVG(item)" :alt="item" />
             <span class="tooltip-text">{{ item }}</span>
           </div>
         </div>
@@ -26,7 +25,7 @@
 
       <div class="skills__others">
         <div class="skills__others__heading">
-          <img src="@/../src/assets/svg/others.svg" alt="Others" />
+          <img :src="othersSVG" alt="Others" />
           <h2>Others</h2>
         </div>
 
@@ -36,7 +35,7 @@
             :key="`others-${index}`"
             class="skills__others__list--item tooltip-wrapper"
           >
-            <img :src="`@/../src/assets/svg/${item}.svg`" :alt="item" />
+            <img :src="getSVG(item)" :alt="item" />
             <span class="tooltip-text">{{ item }}</span>
           </div>
         </div>
@@ -46,6 +45,48 @@
 </template>
 
 <script>
+import frontendSVG from '/src/assets/svg/frontend.svg'
+import othersSVG from '/src/assets/svg/others.svg'
+
+const svgMap = {
+  HTML: '/src/assets/svg/HTML.svg',
+  CSS: '/src/assets/svg/CSS.svg',
+  JavaScript: '/src/assets/svg/JavaScript.svg',
+  TypeScript: '/src/assets/svg/TypeScript.svg',
+  React: '/src/assets/svg/React.svg',
+  Redux: '/src/assets/svg/Redux.svg',
+  NextJS: '/src/assets/svg/NextJS.svg',
+  VueJS: '/src/assets/svg/VueJS.svg',
+  NuxtJS: '/src/assets/svg/NuxtJS.svg',
+  Vuex: '/src/assets/svg/Vuex.svg',
+  Bootstrap: '/src/assets/svg/Bootstrap.svg',
+  SASS: '/src/assets/svg/SASS.svg',
+  Tailwind: '/src/assets/svg/Tailwind.svg',
+  MaterialUI: '/src/assets/svg/MaterialUI.svg',
+  Jasmine: '/src/assets/svg/Jasmine.svg',
+  Jest: '/src/assets/svg/Jest.svg',
+  ViteJS: '/src/assets/svg/ViteJS.svg',
+  Webpack: '/src/assets/svg/Webpack.svg',
+  NPM: '/src/assets/svg/NPM.svg',
+  NodeJS: '/src/assets/svg/NodeJS.svg',
+  cpp: '/src/assets/svg/cpp.svg',
+  Dart: '/src/assets/svg/Dart.svg',
+  Flutter: '/src/assets/svg/Flutter.svg',
+  Python: '/src/assets/svg/Python.svg',
+  MongoDB: '/src/assets/svg/MongoDB.svg',
+  Firebase: '/src/assets/svg/Firebase.svg',
+  GIT: '/src/assets/svg/GIT.svg',
+  Figma: '/src/assets/svg/Figma.svg',
+  ESlint: '/src/assets/svg/ESlint.svg',
+  Yarn: '/src/assets/svg/Yarn.svg',
+  Markdown: '/src/assets/svg/Markdown.svg',
+  Github: '/src/assets/svg/Github.svg',
+  Ubuntu: '/src/assets/svg/Ubuntu.svg',
+  Scrum: '/src/assets/svg/Scrum.svg',
+  Cypress: '/src/assets/svg/Cypress.svg',
+  Arduino: '/src/assets/svg/Arduino.svg'
+}
+
 export default {
   setup() {
     const frontend = [
@@ -71,7 +112,7 @@ export default {
     const others = [
       'NPM',
       'NodeJS',
-      'C++',
+      'cpp',
       'Dart',
       'Flutter',
       'Python',
@@ -83,13 +124,17 @@ export default {
       'Yarn',
       'Markdown',
       'Github',
-      'Ubunto',
+      'Ubuntu',
       'Scrum',
       'Cypress',
       'Arduino'
     ]
 
-    return { frontend, others }
+    function getSVG(item) {
+      return svgMap[item]
+    }
+
+    return { frontendSVG, othersSVG, frontend, others, getSVG }
   }
 }
 </script>
