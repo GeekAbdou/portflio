@@ -117,7 +117,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 50px;
-    max-width: 90%;
+    max-width: 60%;
     margin: 0 auto;
   }
 }
@@ -254,7 +254,7 @@ export default {
       visibility: hidden;
       opacity: 0;
       position: absolute;
-      bottom: 90%;
+      bottom: 120%;
       left: 50%;
       transform: translateX(-50%);
       padding: 5px;
@@ -283,6 +283,14 @@ export default {
     &:hover .tooltip-text {
       visibility: visible;
       opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .tabs {
+    &__projects {
+      max-width: 90%;
     }
   }
 }

@@ -1,5 +1,5 @@
 <template>
-  <div class="skills-header">
+  <div class="skills-header" id="skills">
     <span>My Skills</span>
   </div>
 

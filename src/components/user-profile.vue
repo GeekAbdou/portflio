@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="home">
     <div class="user-profile">
       <div class="user-profile__card">
         <div class="user-profile__greeting">Hi 👋</div>

@@ -7,14 +7,14 @@
 
       <div class="navbar__links">
         <ul class="navbar__links-list">
-          <li><a class="navbar__links-list--active" href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Blogs</a></li>
-          <li><a href="#" target="_blank" rel="noopener" download="">Download CV</a></li>
-          <li>
-            <div><a href="#">dark</a></div>
+          <li v-for="item in navItems" :key="item.name">
+            <a
+              :href="item.href"
+              :class="{ 'navbar__links-list--active': item.active }"
+              @click="setActive(item.name)"
+            >
+              {{ item.name }}
+            </a>
           </li>
         </ul>
       </div>
@@ -23,14 +23,35 @@
 </template>
 
 <script>
+import { ref } from 'vue'
+
 export default {
   setup() {
-    return {}
+    const navItems = ref([
+      { name: 'Home', href: '#', active: true },
+      { name: 'About', href: '#about', active: false },
+      { name: 'Skills', href: '#skills', active: false },
+      { name: 'Projects', href: '#projects', active: false },
+      { name: 'Questions', href: '#questions', active: false },
+      { name: 'Download CV', href: '#', active: false }
+    ])
+
+    const setActive = (name) => {
+      navItems.value.forEach((item) => {
+        item.active = item.name === name
+      })
+    }
+
+    return { navItems, setActive }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -42,17 +63,15 @@ export default {
   left: 0;
   z-index: 5;
 }
+
 .navbar {
   display: flex;
   align-items: center;
   margin: 0 auto;
   height: 80px;
+
   &__logo {
     width: 100px;
-
-    img {
-      display: block;
-    }
   }
 
   &__links {

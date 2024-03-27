@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="about">
     <div class="about-section">
       <div class="about-section__left">
         <img src="../assets/about-me.webp" alt="" />

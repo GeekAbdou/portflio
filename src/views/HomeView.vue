@@ -5,6 +5,7 @@
     <AboutMe />
     <Myskills />
     <MyProjects />
+    <FooterBar />
   </main>
 </template>
 
@@ -14,6 +15,7 @@ import Hello from '@/components/user-profile.vue'
 import AboutMe from '@/components/user-about.vue'
 import Myskills from '@/components/user-skills.vue'
 import MyProjects from '@/components/user-projects.vue'
+import FooterBar from '@/components/footer-bar.vue'
 
 export default {
   components: {
@@ -21,7 +23,8 @@ export default {
     Hello,
     AboutMe,
     Myskills,
-    MyProjects
+    MyProjects,
+    FooterBar
   }
 }
 </script>
