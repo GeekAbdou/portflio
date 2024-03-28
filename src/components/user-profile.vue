@@ -150,7 +150,7 @@ export default {
       margin: auto 0;
     }
     &__avatar {
-      margin: 0;
+      display: none;
     }
   }
 }

@@ -1,10 +1,12 @@
 <template>
-  <div class="projects-header" id="projects">
-    <span>My Projects</span>
-  </div>
+  <div class="projects">
+    <div class="projects__header" id="projects">
+      <span>My Projects</span>
+    </div>
 
-  <div class="container">
-    <Tabs class="container__Projects" :projects="projects" />
+    <div class="projects__tabs">
+      <Tabs :projects="projects" />
+    </div>
   </div>
 </template>
 
@@ -62,7 +64,7 @@ export default {
           link: 'https://github.com/project2',
           preview: 'https://project2.com',
           description: 'Circle is a social media',
-          langs: ['html', 'CSS', 'JavaScript', 'React']
+          langs: ['html', 'css', 'JavaScript', 'React']
         }
       ]
     }
@@ -71,37 +73,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container {
-  display: flex;
-  justify-content: center;
-}
-
-.projects-header {
-  display: flex;
-  margin: 50px auto;
-  font-size: 30px;
-  font-weight: 900;
-  position: relative;
-  color: #12b886;
-  align-items: center;
-  justify-content: center;
-
-  &::before {
-    content: 'Projects';
-    position: absolute;
-    top: -55px;
-    left: 0;
-    display: inline-block;
-    font-family:
-      Lavishly Yours,
-      cursive;
-    font-size: 80px;
-    line-height: 130px;
+.projects {
+  &__header {
+    display: flex;
+    margin: 50px auto;
+    font-size: 30px;
+    font-weight: 900;
+    position: relative;
     color: #12b886;
-    opacity: 0.2;
-    pointer-events: none;
-    left: 50%;
-    transform: translate(-50%);
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      content: 'Projects';
+      position: absolute;
+      top: -55px;
+      left: 0;
+      display: inline-block;
+      font-family:
+        Lavishly Yours,
+        cursive;
+      font-size: 80px;
+      line-height: 130px;
+      color: #12b886;
+      opacity: 0.2;
+      pointer-events: none;
+      left: 50%;
+      transform: translate(-50%);
+    }
+
+    &__tabs {
+      display: flex;
+      justify-content: center;
+    }
   }
 }
 </style>

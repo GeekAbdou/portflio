@@ -322,7 +322,7 @@ export default {
     height: auto;
 
     &__right {
-      margin: 60px 40px;
+      margin: 0 30px;
 
       &__description {
         font-size: 16px;

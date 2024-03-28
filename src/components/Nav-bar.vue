@@ -94,7 +94,6 @@ export default {
     justify-content: space-between;
 
     @media screen and (max-width: 860px) {
-      width: 85vw;
       display: flex;
       justify-content: space-between;
     }

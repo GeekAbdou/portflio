@@ -99,10 +99,13 @@ const getSVG = (item) => {
 
 <style lang="scss" scoped>
 .skl {
-  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100vh;
+  @media screen and (max-width: 860px) {
+    height: auto;
+  }
 }
 
 .skills-header {

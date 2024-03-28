@@ -57,11 +57,10 @@ export default {}
   background-color: #fff;
   box-shadow: 0 3px 15px #16297c1a;
   color: #6c757d;
-  &__container {
-    max-width: 960px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+
+  /*  @media screen and (max-width: 860px) {
+    height: auto;
+  }*/
 
   &__separator {
     color: #6c757d;
