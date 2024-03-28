@@ -1,45 +1,43 @@
 <template>
-  <div class="skl" id="skills">
-    <div class="skills-header">
-      <span>My Skills</span>
-    </div>
+  <div class="skills-header">
+    <span>My Skills</span>
+  </div>
 
-    <div class="container">
-      <div class="skills">
-        <div class="skills__frontend">
-          <div class="skills__frontend__heading">
-            <img :src="frontendSVG" alt="Frontend" />
-            <h2>&lt;Frontend/&gt;</h2>
-          </div>
-
-          <div class="skills__frontend__list">
-            <div
-              v-for="(item, index) in frontend"
-              :key="`frontend-${index}`"
-              class="skills__frontend__list--item tooltip-wrapper"
-            >
-              <img :src="getSVG(item)" :alt="item" />
-
-              <span class="tooltip-text">{{ item }}</span>
-            </div>
-          </div>
+  <div class="container">
+    <div class="skills">
+      <div class="skills__frontend">
+        <div class="skills__frontend__heading">
+          <img src="../assets/svg/frontend.svg" alt="Frontend" />
+          <h2>&lt;Frontend/&gt;</h2>
         </div>
 
-        <div class="skills__others">
-          <div class="skills__others__heading">
-            <img :src="othersSVG" alt="Others" />
-            <h2>Others</h2>
-          </div>
+        <div class="skills__frontend__list">
+          <div
+            v-for="(item, index) in frontend"
+            :key="`frontend-${index}`"
+            class="skills__frontend__list--item tooltip-wrapper"
+          >
+            <img :src="import(`/assets/svg/${item}.svg`)" :alt="item" />
 
-          <div class="skills__others__list">
-            <div
-              v-for="(item, index) in others"
-              :key="`others-${index}`"
-              class="skills__others__list--item tooltip-wrapper"
-            >
-              <img :src="getSVG(item)" :alt="item" />
-              <span class="tooltip-text">{{ item }}</span>
-            </div>
+            <span class="tooltip-text">{{ item }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills__others">
+        <div class="skills__others__heading">
+          <img src="../assets/svg/others.svg" alt="Others" />
+          <h2>Others</h2>
+        </div>
+
+        <div class="skills__others__list">
+          <div
+            v-for="(item, index) in others"
+            :key="`others-${index}`"
+            class="skills__others__list--item tooltip-wrapper"
+          >
+            <img :src="import(`../src/assets/svg/${item}.svg`)" :alt="item" />
+            <span class="tooltip-text">{{ item }}</span>
           </div>
         </div>
       </div>
@@ -48,8 +46,10 @@
 </template>
 
 <script setup>
-import frontendSVG from '/src/assets/svg/frontend.svg'
-import othersSVG from '/src/assets/svg/others.svg'
+const getSVG = (item) => {
+  return import(`/src/assets/svg/${item}.svg`)
+}
+
 const frontend = [
   'HTML',
   'CSS',
@@ -90,20 +90,9 @@ const others = [
   'cypress',
   'arduino'
 ]
-
-const getSVG = (item) => {
-  return import(`/src/assets/svg/${item}.svg`)
-}
 </script>
 
 <style lang="scss" scoped>
-.skl {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .skills-header {
   display: flex;
   margin: 0 auto;

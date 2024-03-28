@@ -153,6 +153,10 @@ export default {
 .container {
   display: flex;
   justify-content: space-between;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .about-section {
@@ -161,7 +165,6 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  margin-bottom: 150px;
 
   &__right {
     &__title {

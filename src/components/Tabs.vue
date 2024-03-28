@@ -28,7 +28,7 @@
             <div class="project__langs">
               <div
                 v-for="(lang, index) in project.langs"
-                :key="`${projectName}-${index}`"
+                :key="`${index}`"
                 class="project__langs--lang tooltip-wrapper"
               >
                 <img :src="`../src/assets/svg/${lang}.svg`" :alt="lang" />
