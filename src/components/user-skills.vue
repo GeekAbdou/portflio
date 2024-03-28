@@ -51,7 +51,7 @@
 import frontendSVG from '/src/assets/svg/frontend.svg'
 import othersSVG from '/src/assets/svg/others.svg'
 const frontend = [
-  'HTML',
+  'html',
   'CSS',
   'JavaScript',
   'TypeScript',
@@ -61,18 +61,18 @@ const frontend = [
   'VueJS',
   'NuxtJS',
   'Vuex',
-  'Bootstrap',
-  'SASS',
-  'Tailwind',
-  'MaterialUI',
-  'Jasmine',
-  'Jest',
-  'ViteJS',
-  'Webpack'
+  'bootstrap',
+  'sass',
+  'tailwind',
+  'materialui',
+  'jasmine',
+  'jest',
+  'vitejs',
+  'webpack'
 ]
 const others = [
-  'NPM',
-  'NodeJS',
+  'npm',
+  'nodejs',
   'cpp',
   'dart',
   'flutter',
@@ -92,7 +92,8 @@ const others = [
 ]
 
 const getSVG = (item) => {
-  return import(`/src/assets/svg/${item}.svg`)
+  // return import(`/src/assets/svg/${item}.svg`)
+  return new URL(`/src/assets/svg/${item}.svg`, import.meta.url).href
 }
 </script>
 

@@ -25,9 +25,8 @@ export default {
           image: projectImage,
           link: 'https://github.com/project1',
           preview: 'https://project1.com',
-          description:
-            'Circle is a social mediaCircle is a social mediaCircle is a social mediaCirclCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social Circle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediaCircle is a social mediamediaCircle is a social mediaCircle is a social mediae is a social mediaCircle is a social media',
-          langs: ['HTML', 'CSS', 'JavaScript', 'React']
+          description: 'Circle is a social  mediaCircle is a social media media Circle is',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
         },
         {
           name: 'Project 2',
@@ -36,7 +35,7 @@ export default {
           link: 'https://github.com/project2',
           preview: 'https://project2.com',
           description: 'Circle is a social media',
-          langs: ['HTML', 'React']
+          langs: ['html', 'React']
         },
         {
           name: 'Project 3',
@@ -54,7 +53,7 @@ export default {
           link: 'https://github.com/project2',
           preview: 'https://project2.com',
           description: 'Circle is a social media',
-          langs: ['HTML', 'JavaScript', 'React']
+          langs: ['html', 'JavaScript', 'React']
         },
         {
           name: 'Project 5',
@@ -63,7 +62,7 @@ export default {
           link: 'https://github.com/project2',
           preview: 'https://project2.com',
           description: 'Circle is a social media',
-          langs: ['HTML', 'CSS', 'JavaScript', 'React']
+          langs: ['html', 'CSS', 'JavaScript', 'React']
         }
       ]
     }

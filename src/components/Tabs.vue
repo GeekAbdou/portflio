@@ -31,7 +31,7 @@
                 :key="`${index}`"
                 class="project__langs--lang tooltip-wrapper"
               >
-                <img :src="`../src/assets/svg/${lang}.svg`" :alt="lang" />
+                <img :src="getSVG(lang)" :alt="lang" />
                 <span class="tooltip-text">{{ lang }}</span>
               </div>
             </div>
@@ -89,8 +89,11 @@ export default {
       }
       return props.projects.filter((project) => project.category === activeTab.value)
     })
-
-    return { tabs, activeTab, setActiveTab, filteredProjects }
+    const getSVG = (item) => {
+      // return import(`/src/assets/svg/${item}.svg`)
+      return new URL(`/src/assets/svg/${item}.svg`, import.meta.url).href
+    }
+    return { tabs, activeTab, setActiveTab, filteredProjects, getSVG }
   }
 }
 </script>
