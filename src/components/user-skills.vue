@@ -93,7 +93,7 @@ const others = [
 
 const getSVG = (item) => {
   // return import(`/src/assets/svg/${item}.svg`)
-  return new URL(`/src/assets/svg/${item}.svg`, import.meta.url).href
+  return new URL(`/src/assets/svg/${item.toLowerCase()}.svg`, import.meta.url).href
 }
 </script>
 
