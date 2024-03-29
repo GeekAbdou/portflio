@@ -16,6 +16,15 @@
               {{ item.name }}
             </a>
           </li>
+          <li v-for="item in navItems" :key="item.name">
+            <a
+              :href="item.href"
+              :class="{ 'navbar__links-list--active': item.active }"
+              @click="setActive(item.name)"
+            >
+              {{ item.name }}
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
@@ -31,8 +40,7 @@ export default {
       { name: 'Home', href: '#home', active: true },
       { name: 'About', href: '#about', active: false },
       { name: 'Skills', href: '#skills', active: false },
-      { name: 'Projects', href: '#projects', active: false },
-      { name: 'Contact', href: '#contact', active: false }
+      { name: 'Projects', href: '#projects', active: false }
     ])
     const navOpen = ref(false)
 
@@ -199,16 +207,16 @@ export default {
   width: 24px;
 }
 .bm-menu {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1000; /* Stay on top */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
   top: 0;
   left: 0;
-  background-color: rgb(63, 63, 65); /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /*0.5 second transition effect to slide in the sidenav*/
+  background-color: rgb(63, 63, 65);
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
 }
 
 .bm-overlay {

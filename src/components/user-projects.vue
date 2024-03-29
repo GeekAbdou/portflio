@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Tabs from './Tabs.vue'
+import Tabs from './ProjectsTabs.vue'
 import projectImage from '../assets/123.webp'
 
 export default {
