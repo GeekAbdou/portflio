@@ -84,19 +84,10 @@
     ├── src
     │   ├── App.vue
     │   ├── assets
-    │   │   ├── 123.webp
-    │   │   ├── abdelrahman.png
-    │   │   ├── about-me.webp
-    │   │   ├── base.css
-    │   │   ├── favicon-full.png
-    │   │   ├── logo.svg
-    │   │   ├── main.css
-    │   │   └── svg
     │   ├── components
     │   │   ├── Nav-bar.vue
     │   │   ├── Tabs.vue
     │   │   ├── __tests__
-    │   │   │   └── HelloWorld.spec.js
     │   │   ├── footer-bar.vue
     │   │   ├── user-about.vue
     │   │   ├── user-profile.vue

@@ -243,6 +243,10 @@ const getSVG = (item) => {
         opacity 0.3s,
         visibility 0.3s;
 
+      &::first-letter {
+        text-transform: capitalize;
+      }
+
       &::before {
         content: '';
         position: absolute;

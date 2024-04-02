@@ -12,7 +12,6 @@
 
 <script>
 import Tabs from './ProjectsTabs.vue'
-import projectImage from '../assets/123.webp'
 
 export default {
   components: {
@@ -22,49 +21,157 @@ export default {
     return {
       projects: [
         {
-          name: 'Project 1',
+          id: 1,
+          name: 'DevDisc',
           category: 'React',
-          image: projectImage,
-          link: 'https://github.com/project1',
-          preview: 'https://project1.com',
-          description: 'Circle is a social  mediaCircle is a social media media Circle is',
+          image: 'devdisc.jpeg',
+          link: 'https://github.com/GeekAbdou/DevDisc',
+          preview: 'https://dev-disc.vercel.app/',
+          description: 'Developers Discussion Fourm',
           langs: ['html', 'CSS', 'JavaScript', 'React']
         },
         {
-          name: 'Project 2',
+          id: 2,
+          name: 'Leon',
           category: 'React',
-          image: projectImage,
-          link: 'https://github.com/project2',
-          preview: 'https://project2.com',
-          description: 'Circle is a social media',
-          langs: ['html', 'React']
+          image: 'leon.jpeg',
+          link: 'https://github.com/GeekAbdou/FrontEnd_Practice/tree/main/Template_one',
+          preview: 'https://geekabdou.github.io/FrontEnd_Practice/Template_one/',
+          description: 'We are Leon - Super Creative & Minimal Agency Web Template',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
         },
         {
-          name: 'Project 3',
-          category: 'Vue',
-          image: projectImage,
-          link: 'https://github.com/project2',
-          preview: 'https://project2.com',
-          description: 'Circle is a social media',
-          langs: ['JavaScript', 'React']
+          id: 3,
+          name: 'Beautiful Escape',
+          category: 'React',
+          image: 'surf.jpeg',
+          link: 'https://github.com/GeekAbdou/FrontEnd_Practice/tree/main/Template_Three',
+          preview: 'https://geekabdou.github.io/FrontEnd_Practice/Template_Three/index.html#',
+          description:
+            'One of the greatest things about the sport of surfing is that you need only three things: your body, a surfboard, and a wave. ',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
         },
         {
-          name: 'Project 4',
-          category: 'Vue',
-          image: projectImage,
-          link: 'https://github.com/project2',
-          preview: 'https://project2.com',
-          description: 'Circle is a social media',
-          langs: ['html', 'JavaScript', 'React']
+          id: 4,
+          name: 'Kasper',
+          category: 'React',
+          image: 'kasper.jpeg',
+          link: 'https://github.com/GeekAbdou/FrontEnd_Practice/tree/main/Template_two',
+          preview: 'https://geekabdou.github.io/FrontEnd_Practice/Template_two/',
+          description: 'We are Leon - Super Creative & Minimal Agency Web Template',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
         },
         {
-          name: 'Project 5',
-          category: 'Vue',
-          image: projectImage,
-          link: 'https://github.com/project2',
-          preview: 'https://project2.com',
-          description: 'Circle is a social media',
-          langs: ['html', 'css', 'JavaScript', 'React']
+          id: 5,
+          name: 'Infinity',
+          category: 'React',
+          image: 'surf.jpeg',
+          link: 'https://github.com/GeekAbdou/VueCLI/tree/main',
+          preview: 'https://github.com/GeekAbdou/VueCLI/tree/main',
+          description:
+            ' This is an example of decribtion of bla on bla This is an example of decribtion of bla on blaThis is an example of decribtion of bla on bla  ',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
+        },
+        {
+          id: 6,
+          name: 'Image processing API',
+          category: 'React',
+          image: 'imgprocessing.jpeg',
+          link: 'https://github.com/GeekAbdou/Img-Processing-API',
+          preview: 'https://github.com/GeekAbdou/Img-Processing-API',
+          description:
+            'it resize images to new width and height.if the image is already resized it will not resize it again and will fetch the existing thumbnail',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
+        },
+        {
+          id: 7,
+          name: 'Music Player',
+          category: 'React',
+          image: 'musicplayer.jpeg',
+          link: 'https://github.com/GeekAbdou/Vanilla_JS_Apps/tree/main/Music%20Player/',
+          preview: 'https://geekabdou.github.io/Vanilla_JS_Apps/Music%20Player/',
+          description: 'Basic Function of Msuic Player, Repeate or shuffle next music',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
+        },
+        {
+          id: 8,
+          name: 'Analog Clock',
+          category: 'React',
+          image: 'clock.jpeg',
+          link: 'https://github.com/GeekAbdou/Vanilla_JS_Apps/tree/main/Analog%20Clock',
+          preview: 'https://geekabdou.github.io/Vanilla_JS_Apps/Analog%20Clock/',
+          description: 'Analog Clock',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
+        },
+        {
+          id: 9,
+          name: 'JS Todo App',
+          category: 'React',
+          image: 'jstodo.jpeg',
+          link: 'https://github.com/GeekAbdou/Vanilla_JS_Apps/tree/main/TODO%20App',
+          preview: 'https://geekabdou.github.io/Vanilla_JS_Apps/TODO%20App/',
+          description: 'Analog Clock',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
+        },
+        {
+          id: 10,
+          name: 'Admin Panel',
+          category: 'React',
+          image: 'adminpanel.jpeg',
+          link: 'https://github.com/GeekAbdou/AdminPanel?tab=readme-ov-file',
+          preview: 'https://geekabdou.github.io/AdminPanelPage/#/',
+          description: 'Admin Panel',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
+        },
+        {
+          id: 9,
+          name: 'Spark Cart',
+          category: 'React',
+          image: 'cartspark.jpeg',
+          link: 'https://github.com/GeekAbdou/CartSpark',
+          preview: 'https://github.com/GeekAbdou/CartSpark',
+          description: 'Analog Clock',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
+        },
+        {
+          id: 9,
+          name: 'Ishop App',
+          category: 'React',
+          image: 'ishop.jpeg',
+          link: 'https://github.com/GeekAbdou/iShop',
+          preview: 'https://github.com/GeekAbdou/iShop',
+          description: 'Analog Clock',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
+        },
+        {
+          id: 9,
+          name: ' AVR_GPIO_Driver',
+          category: 'React',
+          image: 'gpio.jpeg',
+          link: 'https://github.com/GeekAbdou/AVR_GPIO_Driver',
+          preview: 'https://github.com/GeekAbdou/AVR_GPIO_Driver',
+          description: 'Analog Clock',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
+        },
+        {
+          id: 9,
+          name: 'InstaLog',
+          category: 'React',
+          image: 'instaLog.jpeg',
+          link: 'https://github.com/GeekAbdou/InstaLog',
+          preview: 'instalog-ebon.vercel.app/',
+          description: 'InstaLog - Instabug FrontEnd Internship Challenge',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
+        },
+        {
+          id: 9,
+          name: 'Adopt Me',
+          category: 'React',
+          image: 'adoptme.jpeg',
+          link: 'https://github.com/GeekAbdou/InstaLog',
+          preview: 'https://adopt-me-azure.vercel.app/',
+          description: 'InstaLog - Instabug FrontEnd Internship Challenge',
+          langs: ['html', 'CSS', 'JavaScript', 'React']
         }
       ]
     }

@@ -3,7 +3,10 @@
     <div class="user-profile">
       <div class="user-profile__card">
         <div class="user-profile__greeting">Hi 👋</div>
-        <h1 class="user-profile__name">I'am <span>Abdelrahman</span></h1>
+        <h1 class="user-profile__name">
+          I'am
+          <span class="user-profile__name--span">Abdelrahman</span>
+        </h1>
         <div class="user-profile__role">Frontend Developer</div>
 
         <div class="social">
@@ -100,16 +103,16 @@ export default {
     font-weight: 700;
     margin: -16px 0px;
 
-    span {
+    &--span {
       font-weight: 700;
-      background-size: 100% 100%;
       outline: 0;
-      background-image: linear-gradient(transparent 50%, rgba(18, 184, 134, 0.2) 50%);
       color: #12b886;
-
-      &:hover {
-        background-size: 0% 100%;
-      }
+      background-image: linear-gradient(transparent 50%, rgba(18, 184, 134, 0.2) 50%);
+      transition:
+        background-color 0.3s,
+        scale 0.3s;
+      border: 2px solid transparent;
+      background-size: 0% 100%;
     }
   }
 

@@ -16,15 +16,6 @@
               {{ item.name }}
             </a>
           </li>
-          <li v-for="item in navItems" :key="item.name">
-            <a
-              :href="item.href"
-              :class="{ 'navbar__links-list--active': item.active }"
-              @click="setActive(item.name)"
-            >
-              {{ item.name }}
-            </a>
-          </li>
         </ul>
       </div>
     </nav>
@@ -162,9 +153,7 @@ export default {
         text-decoration: none;
         padding: 8px 12px;
         border-radius: 20px;
-        transition:
-          background-color 0.3s,
-          border-color 0.3s;
+        transition: border-color 0.3s;
         border: 2px solid transparent;
 
         &:hover {
